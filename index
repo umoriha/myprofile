@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>自己紹介</title>
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="indexStyle.css" type="text/css" media="all" />
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body>
+        <script src="control.js" type="text/javascript" charset="utf-8"></script>
+        <header class="headLine">
+            <div class="leftMenu">
+                <a href="#" class="myName">MY<span>★</span>PROFILE</a>
+            </div>
+            <div class="rightMenu" onclick="displayRightMenus()">
+                <i class="fas fa-bars"></i> 
+                
+                <div id="rightMenus">
+                    <a id="profile" href="profile.html">プロフィール</a><br />
+                    <a id="makes" href="makes.html">作ったもの</a><br />
+                    <a id="photo" href="photo.html">写真</a><br />
+                    
+                </div>
+            </div>
+        </header>
+        <div class="title">
+            <div class="titlePic">
+                <h1>はじめまして<br>ご覧いただき誠にありがとうございます！</h1>
+            </div>
+            
+        </div>
+        <div class="mainContents">
+            <div class="contentsBox">
+                <p>このページは自身で制作したHTMLです</p>
+            </div>
+        </div>
+    </body>
+</html>
