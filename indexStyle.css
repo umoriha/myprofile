@@ -121,3 +121,25 @@ header{
 .photo{
     width:25%;
 }
+
+@media (max-width: 768px){
+    .mainContainer {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    }
+.containersItem {
+    padding:.5rem;
+    margin:.5rem;
+    width:90%;
+    background-color: #faa;
+    text-align:justify;
+    }  
+    .photoContainer{
+    display:flex;
+    flex-flow: column wrap;
+    }
+    .photo{
+    width:100%;
+    }
+}
