@@ -37,7 +37,7 @@ header{
 .rightMenu{
     position: relative;
     float: right;
-    padding: .3rem 120px;
+    padding: 5px 120px;
 }
 
 .rightMenu .fas{
