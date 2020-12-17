@@ -1,0 +1,120 @@
+a {
+    text-decoration: none;
+}
+
+span {
+    color: yellow;
+}
+
+body {
+    
+    background-color: #ccf;
+}
+
+header{
+    top:0;
+}
+.headLine {
+    position: fixed;
+    height: 3rem;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 10;
+    color: white;
+}
+
+.leftMenu{
+    padding: 1rem;
+    float: left;
+    
+}
+.myName{
+    color: white;
+    
+}
+
+.rightMenu{
+    position: relative;
+    float: right;
+    padding: 5px 120px;
+}
+
+.rightMenu .fas{
+    font-size: 2.5rem;
+}
+
+.rightMenu .fas:hover{
+    color:gold;
+    cursor: pointer;;
+}
+
+#rightMenus {
+    font-size: 1rem;
+    margin-top: 1rem;
+    position: absolute;
+    float: right;
+    visibility: hidden;
+    
+}
+
+
+.titlePic{
+    margin-top: 3rem;
+    height:70rem;
+    
+    background-size: cover;
+    background-image: url('haikei.svg');
+    z-index: 1;
+}
+
+.title h1{
+    padding-top: 35rem;
+    color: black;
+    text-align: center;
+}
+
+.mainContents{
+    height: 720px;
+    width: 100%;
+}
+.contentsBox{
+    margin:1rem;
+    
+    font-size: 2rem;
+    
+}
+
+.mainContainer {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.containersItem {
+    padding:.5rem;
+    margin:.5rem;
+    width:45%;
+    background-color: #faa;
+    text-align:justify;
+}
+
+.make{
+    margin-top: 3rem;
+}
+
+#insertPrimeNumber{
+    word-break: break-all;
+}
+.showPhoto{
+    margin-top:3rem;
+}
+.photoContainer{
+    display:flex;
+    flex-flow: row wrap;
+    
+}
+
+.photo{
+    width:25%;
+}

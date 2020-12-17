@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>写真</title>
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="indexStyle.css" type="text/css" media="all" />
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body>
+        <script src="control.js" type="text/javascript" charset="utf-8"></script>
+        <header class="headLine">
+            <div class="leftMenu">
+                <a href="index.html" class="myName">MY<span>★</span>PROFILE</a>
+            </div>
+            <div class="rightMenu" onclick="displayRightMenus()">
+                <i class="fas fa-bars"></i> 
+                
+                <div id="rightMenus">
+                    <a id="profile" href="profile.html">プロフィール</a><br />
+                    <a id="makes" href="makes.html">作ったもの</a><br />
+                    <a id="photo" href="photo.html">写真</a><br />
+                    
+                </div>
+            </div>
+        </header>
+        <h2 class="showPhoto">写真</h2>
+        <p>私が趣味で撮影した写真です</p>
+        <div class="photoContainer">
+            <div class="photo">
+                <p>彩雲</p>
+                <img src="img1.svg" width="100%"/>
+            </div>
+            <div class="photo">
+                <p>下関タワー</p>
+                <img src="img2.svg" width="100%"/>
+            </div> 
+            <div class="photo">
+                <p>初夏</p>
+                <img src="img3.svg" width="100%"/>
+            </div>       
+            <div class="photo">
+                <p>滝</p>
+                <img src="img4.svg" width="100%"/>
+            </div>    
+        </div>
+    </body>
+</html>
