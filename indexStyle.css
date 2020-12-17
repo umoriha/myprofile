@@ -52,10 +52,13 @@ header{
 #rightMenus {
     font-size: 1rem;
     margin-top: 1rem;
+    padding: .5rem;
     position: absolute;
     float: right;
     visibility: hidden;
-    background-color: black;
+    background-color: orange;
+    border-radius: 1.5rem 0 1.5rem 0;
+    z-index: 2;
 }
 
 
