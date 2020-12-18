@@ -11,9 +11,9 @@
     <body>
         <script src="control.js" type="text/javascript" charset="utf-8"></script>
         <header class="headLine">
-            <div class="leftMenu">
+            <section class="leftMenu">
                 <a href="index.html" class="myName">MY<span>★</span>PROFILE</a>
-            </div>
+            </section>
             <div class="rightMenu" onclick="displayRightMenus()">
                 <i class="fas fa-bars"></i> 
                 
@@ -25,13 +25,13 @@
                 </div>
             </div>
         </header>
-        <div class = "make">
+        <section class = "make">
             <h2>作ったもの</h2>
             <p>私自身が業務で作成したプログラムやホームページはまだありません</p>
             <p>趣味で作ったものをここに載せます</p>
-        </div>
+        </section>
         <div class="mainContainer">
-            <div class="containersItem">
+            <section class="containersItem">
                 <h3 class="primeNumber">指定した数字までの素数を求められます</h3>
                 <form id="" action="" method="get" accept-charset="utf-8">
                     <input type="text" name="input" id="input" placeholder="半角数字"/>
@@ -43,6 +43,7 @@
                         const inputText = document.getElementById("input").value;
                         const inputNumber = Number(inputText);
                         const primeNumber = [];
+                        document.getElementById("nowLording").style.display = "block";
                         for (let number = 2; number < inputNumber; number++) {
                             let selecter = "true";
                             for (let i = 0; i < primeNumber.length; i++) {
@@ -55,11 +56,13 @@
                                 primeNumber.push(number);
                             }
                         }
+                        document.getElementById("nowLording").style.display = "none";
                         document.getElementById("insertPrimeNumber").innerHTML = primeNumber;
                     }
                 </script> 
+                <img id="nowLording" src="nowLording.gif" alt="読み込み中" style="display:none;"/>
                 <p id="insertPrimeNumber" ></p>
-            </div>
+            </section>
         </div>
     </body>
 </html>
