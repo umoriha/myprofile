@@ -43,21 +43,31 @@
                         const inputText = document.getElementById("input").value;
                         const inputNumber = Number(inputText);
                         const primeNumber = [];
-                        document.getElementById("nowLording").style.display = "block";
-                        for (let number = 2; number < inputNumber; number++) {
-                            let selecter = "true";
-                            for (let i = 0; i < primeNumber.length; i++) {
-                                let amari = number % primeNumber[i];
-                                if (amari === 0) {
-                                    selecter = "false";
+                        const setNowLording = () => {
+                            document.getElementById("nowLording").style.display = "block";
+                        };
+                        const setPrimeNumber = (close) => {
+                            for (let number = 2; number < inputNumber; number++) {
+                                let selecter = "true";
+                                for (let i = 0; i < primeNumber.length; i++) {
+                                    let amari = number % primeNumber[i];
+                                    if (amari === 0) {
+                                        selecter = "false";
+                                    }
                                 }
+                                if (selecter === "true") {
+                                    primeNumber.push(number);
+                                }
+                            document.getElementById("insertPrimeNumber").innerHTML = primeNumber;
                             }
-                            if (selecter === "true") {
-                                primeNumber.push(number);
-                            }
-                        }
-                        document.getElementById("nowLording").style.display = "none";
-                        document.getElementById("insertPrimeNumber").innerHTML = primeNumber;
+                            close();
+                        };
+                        const closeNowLording = () => {
+                            document.getElementById("nowLording").style.display = "none"
+                        };
+                        
+                        setNowLording();
+                        setPrimeNumber(closeNowLording);
                     }
                 </script> 
                 <img id="nowLording" src="nowLording.gif" alt="読み込み中" style="display:none;"/>
