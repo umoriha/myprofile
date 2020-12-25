@@ -43,9 +43,9 @@
                         const inputText = document.getElementById("input").value;
                         const inputNumber = Number(inputText);
                         const primeNumber = [];
-                        const setNowLording = (SETPRIMENUMBER) => {
+                        const setNowLording = (SETPRIMENUMBER, CLOSENOWLORDING) => {
                             document.getElementById("nowLording").style.display = "block";
-                            SETPRIMENUMBER();
+                            SETPRIMENUMBER(CLOSENOWLORDING);
                         };
                         const setPrimeNumber = (CLOSENOWLORDING) => {
                             for (let number = 2; number < inputNumber; number++) {
@@ -67,7 +67,7 @@
                             document.getElementById("nowLording").style.display = "none"
                         };
                         
-                        setNowLording(setPrimeNumber(closeNowLording));
+                        setNowLording(setPrimeNumber, closeNowLording);
                     }
                 </script> 
                 <img id="nowLording" src="nowLording.gif" alt="読み込み中" style="display:none;"/>
