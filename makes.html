@@ -43,10 +43,11 @@
                         const inputText = document.getElementById("input").value;
                         const inputNumber = Number(inputText);
                         const primeNumber = [];
-                        const setNowLording = () => {
+                        const setNowLording = (SETPRIMENUMBER) => {
                             document.getElementById("nowLording").style.display = "block";
+                            SETPRIMENUMBER();
                         };
-                        const setPrimeNumber = (close) => {
+                        const setPrimeNumber = (CLOSENOWLORDING) => {
                             for (let number = 2; number < inputNumber; number++) {
                                 let selecter = "true";
                                 for (let i = 0; i < primeNumber.length; i++) {
@@ -60,14 +61,13 @@
                                 }
                             document.getElementById("insertPrimeNumber").innerHTML = primeNumber;
                             }
-                            close();
+                            CLOSENOWLORDING();
                         };
                         const closeNowLording = () => {
                             document.getElementById("nowLording").style.display = "none"
                         };
                         
-                        setNowLording();
-                        setPrimeNumber(closeNowLording);
+                        setNowLording(setPrimeNumber(closeNowLording));
                     }
                 </script> 
                 <img id="nowLording" src="nowLording.gif" alt="読み込み中" style="display:none;"/>
