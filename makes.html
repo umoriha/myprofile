@@ -85,7 +85,9 @@
                   Promise.all([
                       promise1(),
                       promise2()
-                  ])
+                  ]).then(function() {
+                      closeNowLording();
+                  });
                 }
                 
                 </script> 
