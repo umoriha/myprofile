@@ -81,11 +81,10 @@ header{
     height: 720px;
     width: 100%;
 }
+
 .contentsBox{
     margin:1rem;
-    
     font-size: 2rem;
-    
 }
 
 .mainContainer {
@@ -106,12 +105,27 @@ header{
     margin-top: 3rem;
 }
 
+#nowLording{
+    position: absolute; 
+    top :0; 
+    margin: 200px; 
+    display: block;
+}
+
+/*@keyframes lordingAnimation{*/
+/*    100%{*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+
 #insertPrimeNumber{
     word-break: break-all;
 }
+
 .showPhoto{
     margin-top:3rem;
 }
+
 .photoContainer{
     display:flex;
     flex-flow: row wrap;  
@@ -146,6 +160,7 @@ header{
     display: flex;
     flex-flow: row wrap;
     }
+    
 .containersItem {
     padding:.5rem;
     margin:.5rem;
