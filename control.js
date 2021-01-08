@@ -17,6 +17,57 @@ const displayRightMenus = () => {
     }
 };
 
+
+const clickFunction = () => {
+    const inputText = document.getElementById("input").value;
+    const inputNumber = Number(inputText);
+    const primeNumber = [];
+    
+    const nowLording = document.getElementById("nowLording");
+    const resetNowLording = nowLording.style.display;
+    const onNowLording = () => {
+        nowLording.style.display = "block";
+    };
+    const offNowLording = () => {
+        nowLording.style.display = resetNowLording;
+    };
+
+    const setPrimeNumber = () => {
+        for (let number = 2; number < inputNumber; number++) {
+        let selecter = "true";
+        for (let i = 0; i < primeNumber.length; i++) {
+            let amari = number % primeNumber[i];
+            if (amari === 0) {
+                selecter = "false";
+            }
+        }
+        if (selecter === "true") {
+            primeNumber.push(number);
+            }
+        }
+        document.getElementById("insertPrimeNumber").innerHTML = primeNumber;
+    };
+    
+    const promise1 = new Promise((resolve, reject) => {
+        setTimeout(function() {
+        setPrimeNumber();
+        offNowLording();    
+        }, 10);
+        
+        resolve();
+    });
+    
+    
+    onNowLording();
+    promise1;
+    
+    
+};
+
+const lord = () => {
+    document.getElementById("nowLording").style.display = "none";
+};
+/////////////////////////////////////
 /*
 let closeRightMenus = () => {
     document.getElementById("profile").style.display = "none";
