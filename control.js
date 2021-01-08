@@ -7,7 +7,6 @@ let displayRightMenus = () => {
 };
 */
 
-
 const displayRightMenus = () => {
     const rightMenusVisibility = document.getElementById("rightMenus");
     if(rightMenusVisibility.style.visibility === "visible") {
@@ -17,19 +16,18 @@ const displayRightMenus = () => {
     }
 };
 
-
 const clickFunction = () => {
     const inputText = document.getElementById("input").value;
     const inputNumber = Number(inputText);
     const primeNumber = [];
     
-    const nowLording = document.getElementById("nowLording");
-    const resetNowLording = nowLording.style.display;
-    const onNowLording = () => {
-        nowLording.style.display = "block";
+    const nowLoading = document.getElementById("nowLoading");
+    const resetNowLoading = nowLoading.style.display;
+    const onNowLoading = () => {
+        nowLoading.style.display = "block";
     };
-    const offNowLording = () => {
-        nowLording.style.display = resetNowLording;
+    const offNowLoading = () => {
+        nowLoading.style.display = resetNowLoading;
     };
 
     const setPrimeNumber = () => {
@@ -51,21 +49,17 @@ const clickFunction = () => {
     const promise1 = new Promise((resolve, reject) => {
         setTimeout(function() {
         setPrimeNumber();
-        offNowLording();    
+        offNowLoading();    
         }, 10);
-        
         resolve();
     });
     
-    
-    onNowLording();
+    onNowLoading();
     promise1;
-    
-    
 };
 
-const lord = () => {
-    document.getElementById("nowLording").style.display = "none";
+const load = () => {
+    document.getElementById("nowLoading").style.display = "none";
 };
 /////////////////////////////////////
 /*
